@@ -7,9 +7,9 @@ export const MealItem = (props) => {
   return (
     <StyledItem>
       <div>
-        <p>{title}</p>
-        <p>{description}</p>
-        <p>{price}</p>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDescription>{description}</StyledDescription>
+        <StyledPrice>${price}</StyledPrice>
       </div>
       <MealForm />
     </StyledItem>
@@ -19,4 +19,18 @@ export const MealItem = (props) => {
 const StyledItem = styled.div`
   display: flex;
   justify-content: space-between;
+  height: 100px;
+  align-items: center;
+`;
+
+const StyledTitle = styled.p`
+  font-weight: 700;
+`;
+
+const StyledDescription = styled.p`
+  font-style: italic;
+`;
+const StyledPrice = styled.p`
+  color: #c7870f;
+  font-weight: bolder;
 `;

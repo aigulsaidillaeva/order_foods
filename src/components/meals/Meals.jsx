@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Meals = () => {
-  return <StyledMeals></StyledMeals>;
+export const Meals = ({ children }) => {
+  return <StyledMeals>{children}</StyledMeals>;
 };
 
 const StyledMeals = styled.div`

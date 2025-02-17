@@ -8,11 +8,14 @@ export const AvailableMeals = () => {
     <StyledAvailabelMeals>
       {DUMMY_MEALS.map((food) => {
         return (
-          <MealItem
-            title={food.title}
-            description={food.description}
-            price={food.price}
-          />
+          <div>
+            <MealItem
+              title={food.title}
+              description={food.description}
+              price={food.price}
+            />
+            <StyledLine></StyledLine>
+          </div>
         );
       })}
     </StyledAvailabelMeals>
@@ -21,4 +24,15 @@ export const AvailableMeals = () => {
 
 const StyledAvailabelMeals = styled.div`
   padding: 10px;
+  background-color: #ffffff;
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 20px;
+  height: 500px;
+`;
+const StyledLine = styled.div`
+  background-color: grey;
+  width: 100%;
+  height: 2px;
 `;
